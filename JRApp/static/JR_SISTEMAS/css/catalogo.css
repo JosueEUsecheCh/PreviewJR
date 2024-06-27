@@ -1,0 +1,106 @@
+.wrapper-1 {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+}
+
+.products-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); /* Ajusta el número de columnas */
+    gap: 30px; /* Espacio entre las cards */
+    width: 100%;
+    max-width: 1200px; /* Ancho máximo del contenedor */
+    padding: 20px;
+}
+
+.outer {
+    position: relative;
+    background: #fff;
+    height: 350px;
+    width: 100%;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+}
+
+.img-p img {
+    position: absolute;
+    top: 0;
+    right: -20px;
+    z-index: 0;
+    animation-delay: 0.5s;
+}
+
+.contentt {
+    animation-delay: 0.3s;
+    position: absolute;
+    left: 20px;
+    z-index: 3;
+}
+
+.contentt h1 {
+    color: #111;
+}
+
+.contentt p {
+    width: 280px;
+    font-size: 13px;
+    line-height: 1.4;
+    color: #000000;
+    margin: 20px 0;
+}
+
+.buttonn {
+    width: fit-content;
+    height: fit-content;
+    margin-top: 10px;
+}
+
+.buttonn a {
+    display: inline-block;
+    overflow: hidden;
+    position: relative;
+    font-size: 11px;
+    color: #1b303f;
+    text-decoration: none;
+    padding: 10px 15px;
+    border: 1px solid #aaa;
+    font-weight: bold;
+}
+
+.buttonn a:after {
+    content: "";
+    position: absolute;
+    top: 0;
+    right: -10px;
+    width: 0%;
+    background: #1b303f;
+    height: 100%;
+    z-index: -1;
+    transition: width 0.3s ease-in-out;
+    transform: skew(-25deg);
+    transform-origin: right;
+}
+
+.buttonn a:hover:after {
+    width: 150%;
+    left: -10px;
+    transform-origin: left;
+}
+
+.buttonn a:hover {
+    color: #fff;
+    transition: all 0.5s ease;
+}
+
+.buttonn a:nth-of-type(1) {
+    border-radius: 50px 0 0 50px;
+    border-right: none;
+}
+
+.buttonn a:nth-of-type(2) {
+    border-radius: 0px 50px 50px 0;
+}

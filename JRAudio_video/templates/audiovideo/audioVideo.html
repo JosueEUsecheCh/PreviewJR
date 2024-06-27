@@ -1,0 +1,30 @@
+{% extends "JR_SISTEMAS/bases/base.html" %}
+
+{% load static %}
+
+{% block content %}
+
+<div class="wrapper-1">
+    <div class="products-grid">
+        {% for audioVideo in AudioVideo %}
+        <div class="outer">
+            <div class="contentt animated fadeInLeft">
+                <h1>{{ audioVideo.name }}</h1>
+                {% if audioVideo.availability %}
+                <p> Disponibilidad: Disponible </p>
+                {% else %}
+                <p> Disponibilidad: Agotado </p>
+                {% endif %}
+                <div class="buttonn">
+                    <a href="#">{{ audioVideo.price }}$</a><a class="cart-btn" href="#"><i class="cart-icon ion-bag"></i>Comprar</a>
+                </div>
+            </div>
+            <div class="img-p">
+                <img src="{{audioVideo.images.url}}" width="300px" class="animated fadeInRight">
+            </div>
+        </div>
+        {% endfor %}
+    </div>
+</div>
+
+{% endblock %}

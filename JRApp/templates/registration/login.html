@@ -1,0 +1,29 @@
+{% extends "JR_SISTEMAS/bases/base.html" %}
+
+{% load static %}
+
+{% block content %}
+
+<body>
+	<div class="login">
+		<div class="login-screen">
+			<div class="app-title">
+				<h1>Login</h1>
+			</div>
+
+			<div class="login-form">
+                <form method="post" action="{% url 'login' %}" >
+                 {% csrf_token %}
+
+                 {{ form }}
+
+                 <button class="btn btn-primary btn-large btn-block" type="submit" href="{% url 'index' %}">Sign in</button>
+                </form>
+				<a class="login-link" href=" {% url 'password_reset' %} ">¿Olvidó su contraseña?</a>
+                <a class="login-link" href=" {% url 'registration' %}"> ¿Aún no tiene una?, créala</a>
+			</div>
+		</div>
+	</div>
+</body>
+
+{% endblock %}

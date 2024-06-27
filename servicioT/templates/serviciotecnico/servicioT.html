@@ -1,0 +1,64 @@
+{% extends "JR_SISTEMAS/bases/base.html" %}
+
+{% load static %}
+
+{% block content %}
+
+<div class="row">
+        <div class="col-3 image-lateral">
+            <img src="{% static 'JR_SISTEMAS/img/3.png' %}"></img>
+        </div>
+        <div class="col-6">
+            <h2 class="formulariocontacto">Contáctanos</h2>
+            <hr>
+            <form action="" method="post" class="was-validated">
+                {% csrf_token %}
+                    
+                <!-- MENSAJES-->
+            {% if messages %}
+                {% for message in messages %}
+                    <div class="alert alert-success alert-dismissible fade show" role="alert">
+                        {{ message }}
+                        <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+                    </div>
+                {% endfor %}
+            {% endif %}
+    
+                 <div class="mb-3">
+                    <label for="name" class="form-label">Nombre y apellido</label>
+                    <input type="text" class="form-control" name="name" id="name" placeholder="Lawrence Chacón" required>
+                    <div class="valid-feedback"></div>
+                 <div class="invalid-feedback">Introduzca su nombre y apellido</div>
+                 </div>
+                
+                 <div class="mb-3">
+                    <label for="name" class="form-label">Correo electrónico</label>
+                    <input type="email" class="form-control" name="email" id="email" placeholder="JRSistemas@gmail.com" required>
+                    <div class="valid-feedback"></div>
+                    <div class="invalid-feedback">Introduzca una dirección de correo electrónico válida</div>
+                 </div>
+    
+                 <div class="mb-3">
+                    <label for="asunto" class="form-label">Asunto</label>
+                    <input type="text" class="form-control" name="asunto" id="asunto" required>
+                    <div class="valid-feedback"></div>
+                    <div class="invalid-feedback">Mótivo de consulta</div>
+                 </div>
+    
+                 <div class="mb-3">
+                    <label for="message" class="form-label">Exposición del asunto</label>
+                    <textarea name="message" class="form-control" id="" rows="10" required></textarea>
+                    <div class="valid-feedback"></div>
+                    <div class="invalid-feedback">Exponga el caso</div>
+                 </div>
+                 <button class="btn btn-primary" type="submit">Enviar</button>
+            </form>
+        </div>
+        <div class="col-3 image-lateral">
+            <img src="{% static 'JR_SISTEMAS/img/3.png' %}"></img>
+        </div>
+    </div>
+
+
+
+{% endblock %}

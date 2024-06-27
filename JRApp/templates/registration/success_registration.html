@@ -1,0 +1,18 @@
+{% extends "JR_SISTEMAS/bases/base.html" %}
+
+{% load static %}
+
+{% block content %}
+
+<body>
+	<div class="register">
+		<div class="register-screen">
+			<div class="app-titles">
+				<h1>Registro exitoso</h1>
+                <a class="btn btn-primary btn-large btn-block" type="submit" href="{% url 'login' %}" >Sign in</a>
+			</div>
+		</div>
+	</div>
+</body>
+
+{% endblock %}

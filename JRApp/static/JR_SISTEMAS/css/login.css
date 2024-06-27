@@ -1,0 +1,68 @@
+.login {
+    margin: 1.25rem auto;
+    width: 18.75rem;
+}
+.login-screen {
+    background-color:#263249;
+    padding: 1.25rem;
+    border-radius: 5px
+}
+    
+.app-title {
+    text-align: center;
+    color:#8bb8f3;
+}
+    
+.login-form {
+    text-align: center;
+    color: #ffffff;
+}
+
+.control-group {
+    margin-bottom: 0.625rem;
+}
+    
+.login-form input {
+    text-align: center;
+    background-color: #ECF0F1;
+    border: 0.125rem solid transparent;
+    border-radius: 0.1875rem;
+    font-size: 1rem;
+    font-weight: 200;
+    padding: 0.625rem 0;
+    width: 15.625rem;
+    transition: border .5s;
+}
+    
+.login-form input:focus {
+    border: 0.125rem solid #3498DB;
+    box-shadow: none;
+}
+    
+.btn {
+    border: 0.125rem solid transparent;
+    background: #8bb8f3;
+    color: #ffffff;
+    font-size: 1rem;
+    line-height: 1.5625rem;
+    padding: 0.625rem 0;
+    text-decoration: none;
+    text-shadow: none;
+    border-radius: 0.1875rem;
+    box-shadow: none;
+    transition: 0.25s;
+    display: block;
+    width: 15.625rem;
+    margin: 1rem auto;
+}
+
+.btn:hover {
+    background-color: #396b9b;
+}
+    
+.login-link {
+    font-size: 0.75rem;
+    color: #deedff;
+    display: block;
+    margin-top: 0.75rem;
+}

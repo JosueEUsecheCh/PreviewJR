@@ -1,0 +1,69 @@
+.form-product {
+    margin: 1.25rem auto;
+    width: 26.75rem;
+}
+.card-product {
+    background-color:#8bb8f3;
+    padding: 1.25rem;
+    border-radius: 5px
+}
+    
+.titlep {
+    text-align: center;
+    color:#263249;
+    padding: 0.6rem;
+}
+    
+.form-products {
+    text-align: center;
+    color: #ffffff;
+}
+
+.form-products input {
+    text-align: left;
+    background-color: #ECF0F1;
+    border: 0.125rem solid transparent;
+    color: #263249;
+    border-radius: 0.1875rem;
+    font-size: 1rem;
+    font-weight: 200;
+    padding: 0.625rem 0;
+    width: 20.625rem;
+    transition: border 0.5s;
+    margin: 0.5rem;
+}
+    
+.form-products input:focus {
+    border: 0.125rem solid #3498DB;
+    box-shadow: none;
+}
+
+.form-products .input-disp input{
+    text-align: left;
+    color: #263249;
+}
+.inputname{
+    color: #263249;
+    font-size: 1rem;
+    text-align: left;
+}
+.button-save {
+    border: 0.125rem solid transparent;
+    background: #263249;
+    color: #ffffff;
+    font-size: 1rem;
+    line-height: 1.5625rem;
+    padding: 0.625rem 0;
+    text-decoration: none !important;
+    text-shadow: none;
+    border-radius: 0.1875rem;
+    box-shadow: none;
+    transition: 0.25s;
+    display: block;
+    width: 15.625rem;
+    margin: 1rem auto;
+}
+
+.button-save:hover {
+    background-color: #396b9b;
+}

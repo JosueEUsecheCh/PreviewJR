@@ -1,0 +1,67 @@
+{% extends "JR_SISTEMAS/bases/base.html" %}
+{% load static %}
+
+{% block content %}
+<div class="form-product">
+    <div class="card-product">
+        <div class="content-product">
+            <h3 class="titlep">Registro de productos</h3>
+            <form class="form-products" method="POST" enctype="multipart/form-data">
+                {% csrf_token %}
+                {{ form.non_field_errors }}
+
+                <div class="productss">
+                    <h5 class="inputname">Nombre</h5>
+                    {{ form.name }}
+                    {% if form.name.errors %}
+                        <ul class="errorlist">
+                            {% for error in form.name.errors %}
+                                <li>{{ error }}</li>
+                            {% endfor %}
+                        </ul>
+                    {% endif %}
+                    
+                    <h5 class="inputname">Descripción</h5>
+                    {{ form.description }}
+
+                    <h5 class="inputname">Imagen</h5>
+                    {{ form.image }}
+                    {% if form.image.errors %}
+                        <ul class="errorlist">
+                            {% for error in form.image.errors %}
+                                <li>{{ error }}</li>
+                            {% endfor %}
+                        </ul>
+                    {% endif %}
+                    
+                    <h5 class="inputname">Precio</h5>
+                    {{ form.price }}
+                    {% if form.price.errors %}
+                        <ul class="errorlist">
+                            {% for error in form.price.errors %}
+                                <li>{{ error }}</li>
+                            {% endfor %}
+                        </ul>
+                    {% endif %}
+
+                    <h5 class="inputname">Categoría</h5>
+                    {{ form.category }}
+
+                    <h5 class="inputname">Disponibilidad</h5>
+                    {{ form.avaiability }}
+                    {% if form.avaiability.errors %}
+                        <ul class="errorlist">
+                            {% for error in form.avaiability.errors %}
+                                <li>{{ error }}</li>
+                            {% endfor %}
+                        </ul>
+                    {% endif %}
+                </div>
+
+                <button type="submit" class="button-save">Subir</button>
+                <a href="{% url 'index' %}" class="button-save">Cancelar</a>
+            </form>
+        </div>
+    </div>
+</div>
+{% endblock %}

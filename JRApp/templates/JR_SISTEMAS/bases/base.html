@@ -1,0 +1,98 @@
+<html>
+
+<head>
+
+  {% load static %}
+
+    <!-- Bootstrap -->
+    <link href="{% static 'JR_SISTEMAS/vendor/bootstrap/css/bootstrap.min.css' %}" rel="stylesheet">
+
+     <!-- Fonts -->
+    
+     <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@300&display=swap" rel="stylesheet"> 
+     <link href="https://fonts.googleapis.com/css?family=Lora:400,400i,700,700i" rel="stylesheet">
+     
+
+    <!-- Styles -->
+    <!-- Para el slicer -->
+    <link rel="stylesheet" href="https://unpkg.com/swiper@8/swiper-bundle.min.css"/>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+
+    <link href="{% static 'JR_SISTEMAS/css/index.css' %}?v=1.0" rel="stylesheet">
+    <!-- <link href="{% static 'JR_SISTEMAS/css/gestion.css' %}" rel="stylesheet"> -->
+    <link href="{% static 'JR_SISTEMAS/css/catalogo.css' %}?v=1.0" rel="stylesheet">
+    <link href="{% static 'JR_SISTEMAS/css/servicioT.css' %}?v=1.0" rel="stylesheet">
+    <link href="{% static 'JR_SISTEMAS/css/login.css' %}" rel="stylesheet">
+    <link href="{% static 'JR_SISTEMAS/css/register.css' %}" rel="stylesheet">
+    <link href="{% static 'JR_SISTEMAS/css/navbar.css' %}" rel="stylesheet">
+    <link href="{% static 'JR_SISTEMAS/css/products.css' %}" rel="stylesheet">
+</head>
+</head>
+
+<body>
+
+ <!-- Barra de navegación -->
+
+<div class="JRSISTEMAS-container">
+  <h1 class="JRSISTEMAS"> JR SISTEMAS </h1>
+  <h3 class="sub-JRSISTEMAS"> Lo mejor en computación</h3>
+</div>
+
+
+<div class="Menu">
+  <input id="nav-toggle" type="checkbox"/>
+  <label class="nav-btn" for="nav-toggle">
+    <span></span>
+  </label>
+
+  <ul class="nav-box">
+    {% if user.is_authenticated %}
+    <li class="nombre_usuario_login"> Bienvenido, {{ user.username }}</li>
+    <li><a class="nav-item" href="{% url 'exit' %}">Logout</a></li>
+    {% else %}
+    <li><a class="nav-item" href="{% url 'login' %}">Login</a></li>
+    {% endif %}
+    <li><a class="nav-item" href="{% url 'index' %}">Inicio</a></li>
+    <li><a class="nav-item" href="{% url 'componentes' %}">Componentes</a></li>
+    <li><a class="nav-item" href="{% url 'equipos' %}">Equipos</a></li>
+    <li><a class="nav-item" href="{% url 'audioVideo' %}">Audio y vídeo</a></li>
+    <li><a class="nav-item" href="{% url 'products' %}">Registro de productos</a></li>
+</ul>
+</div>
+
+
+
+
+{% if instance.image %}
+  <img src="{{ instance.images.url }}" class="custom-image" alt="Imagen desde la base de datos">
+  {% endif %}
+{% block content %}
+
+
+{% endblock %}
+
+  <!-- Footer -->
+  <footer class="footer">
+    <h3>JR SISTEMAS</h3>
+    <p>Siempre para prestar el mejor servicio</p>
+    <hr class="linee">
+    <div class="enlaces">
+      <a href="" class="colorenlace">Sobre nosotros |</a>
+      <a href="{% url 'servicioT' %}" class="colorenlace"> Contáctanos</a>
+    </div>
+  </footer>
+
+    <!-- Bootstrap -->
+    <script src="{% static 'JR_SISTEMAS/vendor/jquery/jquery.min.js' %}"></script>
+    <script src="{% static 'JR_SISTEMAS/vendor/bootstrap/js/bootstrap.bundle.min.js' %}"></script>
+    <!--Para el slicer-->
+    <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+    <script src="https://unpkg.com/swiper@8/swiper-bundle.min.js"></script>
+    <!-- Para el JS -->
+    <script src="{% static 'JR_SISTEMAS/Js/index.js' %}"></script>
+
+</body>
+
+
+</html>

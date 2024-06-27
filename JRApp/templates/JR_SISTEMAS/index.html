@@ -1,0 +1,145 @@
+{% extends "JR_SISTEMAS/bases/base.html" %}
+
+{% load static %}
+
+{% block content %}
+
+<div class="banner-principal">
+  <img src="static/JR_SISTEMAS/img/banner2.png" class="banner-prin">
+  <h2> </h2>
+</div>
+
+<div class="col1">
+  <div> Lorem ipsum dolor, sit amet consectetur adipisicing elit. Assumenda, quaerat nam ea fugiat labore aspernatur ex non, id veniam repellendus officiis pariatur! Enim incidunt harum saepe consequuntur earum natus suscipit.</div>
+  <div><img src="static/JR_SISTEMAS/img/col1.png" alt=""></div>
+</div>
+
+
+<h2 class="presentacion2"> Vísita nuestra ámplia variedad de productos ❗ </h2>
+
+<!--SLICER DE CATEGORÍAS-->
+<section id="tranding">
+  <div class="container-sli1">
+    <h1 class="text-center section-heading"> Categorías de interés </h1>
+  </div>
+  <div class="container-sli">
+    <div class="swiper tranding-slider">
+      <div class="swiper-wrapper">
+        <!-- Slide-start -->
+        <div class="swiper-slide tranding-slide">
+          <div class="tranding-slide-img">
+            <img src="static/JR_SISTEMAS/img/audioyvideo.png" alt="Tranding">
+          </div>
+          <div class="tranding-slide-content">
+            <div class="tranding-slide-content-bottom">
+              <h2 class="food-name">Audio Y Vídeo</h2>
+              <h5><a class="enlace-swiper" href="{% url 'audioVideo' %}"> Ir </a></h5>
+            </div>
+          </div>
+        </div>
+        <!-- Slide-end -->
+         <!-- Slide-start -->
+        <div class="swiper-slide tranding-slide">
+          <div class="tranding-slide-img">
+            <img src="static/JR_SISTEMAS/img/equipos.png" alt="Tranding">
+          </div>
+          <div class="tranding-slide-content">
+            <div class="tranding-slide-content-bottom">
+              <h2 class="food-name">Equipos</h2>
+              <h5><a class="enlace-swiper" href="{% url 'equipos' %}"> Ir </a></h5>
+            </div>
+          </div>
+        </div>
+        <!-- Slide-end -->
+         <!-- Slide-start -->
+        <div class="swiper-slide tranding-slide">
+          <div class="tranding-slide-img">
+            <img src="static/JR_SISTEMAS/img/componentes.png" alt="Tranding">
+          </div>
+          <div class="tranding-slide-content">
+            <div class="tranding-slide-content-bottom">
+              <h2 class="food-name">Componentes</h2>
+              <h5><a class="enlace-swiper" href="{% url 'componentes' %}"> Ir </a></h5>
+            </div>
+          </div>
+        </div>
+        <!-- Slide-end -->
+      </div>
+    </div>
+  </div>
+</section>
+<!--SLICER DE CATEGORÍAS-->
+
+
+<div class="col2">
+<div><img src="static/JR_SISTEMAS/img/col2.png" alt=""></div>
+<div> Lorem ipsum dolor, sit amet consectetur adipisicing elit. Assumenda, quaerat nam ea fugiat labore aspernatur ex non, id veniam repellendus officiis pariatur! Enim incidunt harum saepe consequuntur earum natus suscipit.</div>
+
+</div>
+<div class="colimg">
+<img src="static/JR_SISTEMAS/img/servicio.png">
+<div class="col3"> Contacta nuestro servicio técnico</div>
+</div>
+<!--
+<div class="cards">
+  <! -- TARJETA 1--
+    <div class="custom-image"> 
+    <p><img src="static/JR_SISTEMAS/img/4.png"></p>
+        {# Se coloca la imagen acá #}
+    </div>
+    <div class="details">
+    {# Se colocan los detalles acá #}
+    <h5 style='color:white'>Servicios disponibles</h5>
+
+    <div class="group">
+        {# Se coloca el precio acá #}
+        <a class="nav-link text-uppercase text-expanded" href="{% url 'servicioT' %}">Pedir servicio</a>
+    </div>
+    </div>
+</div>-->
+
+<div class="populares">
+<div>Lo más popular</div>
+</div>
+
+<div class="colcards">
+<!--START CARD-->
+<div class = "card">
+<img src="static/JR_SISTEMAS/img/col3.png" alt="">
+<div class="card-content">
+  <h2 class="cardtitle"> /Nombre de producto destacado </h2>
+  <p class="cardP">
+    /Descripción
+  </p>
+  <a href="#" class="cardA"> Mostrar más como esto</a>
+</div>
+</div>
+<!--END CARD-->
+<!--START CARD-->
+<div class = "card">
+  <img src="static/JR_SISTEMAS/img/col4.png" alt="">
+  <div class="card-content">
+    <h2 class="cardtitle"> /Nombre de producto destacado </h2>
+    <p class="cardP">
+      /Descripción
+    </p>
+    <a href="#" class="cardA"> Mostrar más como esto</a>
+  </div>
+</div>
+<!--END CARD-->
+<!--START CARD-->
+<div class = "card">
+<img src="static/JR_SISTEMAS/img/col5.png" alt="">
+<div class="card-content">
+  <h2 class="cardtitle"> /Nombre de producto destacado </h2>
+  <p class="cardP">
+    /Descripción
+  </p>
+  <a href="#" class="cardA"> Mostrar más como esto</a>
+</div>
+</div>
+<!--END CARD-->
+
+</div>
+
+{% endblock %}
